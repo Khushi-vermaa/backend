@@ -63,3 +63,4 @@ const sendEmail = async (name, phone, email, message, company) => {
 };
 
 module.exports = { sendEmail };
+ 
