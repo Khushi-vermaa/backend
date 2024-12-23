@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= service.title1 %></title>
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+    <style>
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .service-detail {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .service-detail h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .service-image {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-description {
+        font-size: 1.2rem;
+        color: #666;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .service-list {
+        padding-left: 20px;
+      }
+
+      .service-list ul {
+        list-style-type: disc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .service-list li {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      .service-list li:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="service-detail">
+      <h1><%= service.title1 %></h1>
+      <img src="<%= service.mediaUrls[0] %>" alt="<%= service.title1 %>" />
+      <p><%= service.title2 %></p>
+      <div>
+        <ul>
+          <% service.description.forEach(item => { %>
+          <li><%= item %></li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

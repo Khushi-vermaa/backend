@@ -4,7 +4,6 @@ exports.validateContactForm = [
   check("email", "Please enter a valid email").isEmail(),
   check("phone", "Phone number is required").notEmpty(),
   check("message", "Message is required").notEmpty(),
-  check("company", "Company name is required").notEmpty(),
 
   (req, res, next) => {
     const errors = validationResult(req);
